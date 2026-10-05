@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard feedback session - Daryl, Sara &amp; Ivana</title><style>
+:root{--bg:#0D1214;--ink:#E7EDEA;--mut:#9FB0AB;--bd:#233034;--pan:#131c1e;--pur:#d400ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.45 -apple-system,"Segoe UI",sans-serif}
+#wrap{max-width:520px;margin:0 auto;padding:12px;transform-origin:top center}
+h1{font-size:21px;margin:6px 0 2px}h2{font-size:17px;margin:20px 0 8px}.mut{color:var(--mut);font-size:14px}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:6px;padding:6px 0;border-bottom:1px solid var(--bd)}
+button{min-width:44px;min-height:44px;background:#16201f;color:var(--ink);border:1px solid var(--bd);border-radius:8px;font-size:15px;padding:0 10px}
+.step{background:var(--pan);border:1px solid var(--bd);border-left:6px solid var(--pur);border-radius:8px;padding:10px;margin:8px 0}
+.step .w{color:var(--pur);font-weight:700;font-size:13px}
+.ent{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.ent span{display:flex;align-items:center;justify-content:center;min-height:44px;background:#16201f;border:1px solid var(--bd);border-radius:8px;font-size:15px;color:var(--mut)}
+.ent span.on{border-color:var(--ink);color:var(--ink);font-weight:700}
+.f{background:var(--pan);border:1px solid var(--bd);border-radius:8px;padding:10px;margin:8px 0}
+.f label{font-weight:700;display:block}.f .h{color:var(--mut);font-size:14px;margin:2px 0 6px}
+.f .a{margin:0}
+a{color:#4da3ff}
+#msg{color:var(--mut);font-size:14px;min-height:20px}
+footer{margin:24px 0;font-size:13px;color:var(--mut);border-top:1px solid var(--bd);padding-top:8px}
+</style></head><body>
+<div class="bar"><button onclick="zoomBy(0.1)">+</button><button onclick="zoomBy(-0.1)">−</button><button onclick="zoomFit()">FIT</button><button onclick="history.back()">Back</button></div>
+<div id="wrap"><h1>Dashboard feedback session - Daryl, Sara &amp; Ivana</h1>
+<div class="f">No action for Daryl required, this is reference only.</div>
+<h2>Which part of the business is this for?</h2><div class="ent"><span>KM</span><span>TFT</span><span>NCCS</span><span>SylvaNaut</span><span>Library</span><span class="on">MULTIPLE</span></div>
+<h2>WWWWWH</h2>
+<div class="f"><label>Who</label><p class="a" id="who">Daryl, Sara and Ivana participated in Dashboard feedback session.</p></div>
+<div class="f"><label>What</label><p class="a" id="what">Ivana is sharing the minutes from the session on Wed 1 Oct: decisions, plus actions for Ivana and Sara. More details in the link below.</p></div>
+<div class="f"><label>Why</label><p class="a" id="why">So we all work from the same decisions while I (Ivana) revise the Dashboard prototype.</p></div>
+<div class="f"><label>Where</label><p class="a" id="where">NA (not applicable)</p></div>
+<div class="f"><label>How</label><p class="a" id="how">NA (not applicable)</p></div>
+<h2>Links to files</h2><div class="f"><a id="lk" href="https://docs.google.com/document/d/1FI3XIp9jlgjadN95h4kY004kxK7J8t_Sq3MXVULW-ps/edit?usp=sharing">Meeting minutes, 1 Oct 2026 (Google Doc)</a></div>
+</div>
+<script>
+let z=1;const w=document.getElementById('wrap');
+function zoomBy(d){z=Math.max(0.6,Math.min(2,z+d));w.style.transform='scale('+z+')'}
+function zoomFit(){z=1;w.style.transform='none'}
+</script></body></html>
